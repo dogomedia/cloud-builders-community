@@ -1,0 +1,8 @@
+steps:
+
+- name: 'gcr.io/kaniko-project/executor:latest'
+  id: build_docker_image
+  args:
+  - --destination=gcr.io/$PROJECT_ID/bundler:latest
+  - --cache=true
+  - --cache-ttl=24h
