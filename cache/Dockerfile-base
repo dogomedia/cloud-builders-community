@@ -1,4 +1,6 @@
-FROM gcr.io/cloud-builders/gcloud-slim
+FROM gcr.io/google.com/cloudsdktool/cloud-sdk:alpine
+
+RUN apk add tar
 
 COPY checksum /bin
 COPY save_cache /bin
